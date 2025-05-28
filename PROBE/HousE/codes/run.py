@@ -226,12 +226,6 @@ def objective():
     if args.do_train and args.save_path is None:
         raise ValueError('Where do you want to save your trained model?')
     
-    '''if args.save_path and not os.path.exists(args.save_path):
-        os.makedirs(args.save_path)'''
-    
-    # Write logs to checkpoint and console
-    # set_logger(args)
-    
     with open(os.path.join(args.data_path, 'entities.dict')) as fin:
         entity2id = dict()
         id2e = dict()
